@@ -1,0 +1,23 @@
+.car_import_section {
+  width: 50%;
+  height: 100%;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+
+.car_import_section > div {
+  width: 300px;
+}
+
+@media (max-width: 750px) {
+  .car_import_section {
+    width: 100%;
+  }
+
+  .car_import_section > div {
+    width: 100%;
+  }
+}
