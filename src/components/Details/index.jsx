@@ -1,11 +1,18 @@
 import { useContext, useEffect } from "react";
 import { CarContext } from "../../context";
+import { useNavigate, Link } from "react-router-dom";
 import "./styles.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import { DetailWrap } from "./DetailWrap";
 
 export const Details = () => {
   const { finale, course } = useContext(CarContext);
+  const navigate = useNavigate();
+
+  const toResult = () => {
+    localStorage.setItem("finale", JSON.stringify(finale));
+    localStorage.setItem("course", JSON.stringify(course));
+  };
 
   if (!finale) {
     return (
@@ -16,5 +23,12 @@ export const Details = () => {
       </div>
     );
   }
-  return <DetailWrap finale={finale} course={course} />;
+  return (
+    <>
+      <DetailWrap finale={finale} course={course} />
+      <Link to={"/result"} target="_blank" rel="noreferrer" onClick={toResult}>
+        click
+      </Link>
+    </>
+  );
 };

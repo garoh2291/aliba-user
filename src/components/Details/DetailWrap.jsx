@@ -27,10 +27,7 @@ export const DetailWrap = ({ finale, course }) => {
         />
         <DetailItem label={"Auction Fee"} price={+finale.auctionFee.value} />
         <DetailItem label={"VAT"} price={finale.vat.value.toFixed(0)} />
-        <DetailItem
-          label={"Shipping"}
-          price={+finale.deliveryPrice.value.toFixed(0)}
-        />
+        <DetailItem label={"Shipping"} price={+finale.deliveryPrice.value} />
         <DetailItem label={"Eco tax"} price={finale.eco.value.toFixed(0)} />
         <DetailItem
           label={"Insurance"}
