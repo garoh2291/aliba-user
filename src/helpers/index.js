@@ -13,3 +13,13 @@ export const handleCheck = (obj) => {
 
   return answer;
 };
+
+export function clearStorage() {
+  localStorage.removeItem("finale");
+  localStorage.removeItem("course");
+}
+
+export function saveStorage(finale, course) {
+  localStorage.setItem("finale", JSON.stringify(finale));
+  localStorage.setItem("course", JSON.stringify(course));
+}

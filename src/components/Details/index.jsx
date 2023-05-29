@@ -1,13 +1,12 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { CarContext } from "../../context";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./styles.css";
 import CircularProgress from "@mui/material/CircularProgress";
 import { DetailWrap } from "./DetailWrap";
 
 export const Details = () => {
   const { finale, course } = useContext(CarContext);
-  const navigate = useNavigate();
 
   const toResult = () => {
     localStorage.setItem("finale", JSON.stringify(finale));
