@@ -100,12 +100,36 @@
   font-weight: 600;
 }
 
+.pdf_link_wrapper {
+  width: calc(100% - 35%);
+  min-width: 700px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf_link {
+  background-color: red;
+  padding: 10px 50px;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 @media (max-width: 750px) {
   .details_wrapper {
     margin-top: 20px;
     width: 100%;
     min-height: unset;
     height: auto;
+    min-width: unset;
+  }
+
+  .pdf_link_wrapper {
+    width: 100%;
     min-width: unset;
   }
 

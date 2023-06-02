@@ -25,9 +25,17 @@ export const Details = () => {
   return (
     <>
       <DetailWrap finale={finale} course={course} />
-      <Link to={"/result"} target="_blank" rel="noreferrer" onClick={toResult}>
-        click
-      </Link>
+      <div className="pdf_link_wrapper">
+        <Link
+          to={"/result"}
+          target="_blank"
+          rel="noreferrer"
+          onClick={toResult}
+          className="pdf_link"
+        >
+          Print
+        </Link>
+      </div>
     </>
   );
 };
