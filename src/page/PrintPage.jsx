@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   tableCell: {
-    margin: "auto",
     margin: 5,
     fontSize: 14,
     fontWeight: "900",
